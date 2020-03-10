@@ -16,7 +16,7 @@ namespace HKD_WebServer.Controllers
         public class CessionScansController : ControllerBase
         {
             [HttpDelete]
-            //[Authorize(Policy = Consts.ADAdminRole) ]
+            [Authorize(Policy = Consts.ADAdminRole) ]
             [Route("api/[controller]/DelDoc/{id}")]
             public ActionResult DelDoc(Guid id)
             {
@@ -35,7 +35,7 @@ namespace HKD_WebServer.Controllers
             }
 
             [HttpDelete]
-            //[Authorize(Policy = Consts.ADAdminRole) ]
+            [Authorize(Policy = Consts.ADAdminRole) ]
             [Route("api/[controller]/DelScan/{id}")]
             public ActionResult DelScan(Guid id)
             {

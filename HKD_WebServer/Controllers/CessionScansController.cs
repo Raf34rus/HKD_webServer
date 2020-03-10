@@ -18,11 +18,11 @@ using Microsoft.AspNetCore.Identity;
 namespace HKD_WebServer.Controllers
 {
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class CessionScansController : ControllerBase
     {
         [HttpDelete]
-        //[Authorize(Policy = Consts.ADAdminRole) ]
+        [Authorize(Policy = Consts.ADAdminRole) ]
         [Route("api/[controller]/DelScan/{id}")]
         public ActionResult DelScan(int id)
         {

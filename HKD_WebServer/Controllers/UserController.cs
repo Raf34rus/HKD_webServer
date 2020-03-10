@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HKD_WebServer.Controllers
 {
-    //[Authorize]
+    [Authorize]
     //[Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

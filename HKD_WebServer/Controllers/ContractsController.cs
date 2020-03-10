@@ -11,7 +11,7 @@ namespace HKD_WebServer.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class ContractsController : ControllerBase
     {
         ContractManager cm = new ContractManager();

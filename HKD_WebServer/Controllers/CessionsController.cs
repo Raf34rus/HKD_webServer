@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HKD_WebServer.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CessionsController : ControllerBase
@@ -30,7 +30,7 @@ namespace HKD_WebServer.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = Consts.ADAdminRole)]
+        [Authorize(Roles = Consts.ADAdminRole)]
         public ActionResult CreateCessions([FromBody]Cessions _cession)
         {
             try
@@ -56,7 +56,7 @@ namespace HKD_WebServer.Controllers
         }
 
         [HttpPut]
-        //[Authorize(Roles = Consts.ADAdminRole)]
+        [Authorize(Roles = Consts.ADAdminRole)]
         [Route("{id}")]
         public ActionResult EditCession(int id, [FromBody]Cessions _cession)
         {

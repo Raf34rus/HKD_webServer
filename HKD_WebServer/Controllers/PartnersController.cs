@@ -11,7 +11,7 @@ using HKD_WebServer.DataManager;
 
 namespace HKD_WebServer.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PartnersController : ControllerBase
@@ -32,7 +32,7 @@ namespace HKD_WebServer.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = Consts.ADAdminRole)]
+        [Authorize(Roles = Consts.ADAdminRole)]
         public ActionResult CreatePartner([FromBody]Partners _partner)
         {
             try
@@ -55,7 +55,7 @@ namespace HKD_WebServer.Controllers
         }
 
         [HttpPut]
-        //[Authorize(Roles = Consts.ADAdminRole)]
+        [Authorize(Roles = Consts.ADAdminRole)]
         [Route("{id}")]
         public ActionResult<string> EditPartner(int id, [FromBody]Partners _partner)
         {

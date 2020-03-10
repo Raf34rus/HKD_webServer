@@ -8,7 +8,7 @@ namespace HKD_WebServer.Controllers
     [AllowAnonymous]
     public class HomeController : Controller
     {
-        //[Authorize]
+        [Authorize]
         public IActionResult Index()
         {
             ViewBag.stylehref = "https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css";
